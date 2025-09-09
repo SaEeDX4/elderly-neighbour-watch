@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request Help - Elderly Neighbour Watch</title>
+    <meta
+      name="description"
+      content="Request assistance from caring volunteers in your neighborhood through ENW's safe and secure platform."
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header id="header-placeholder"></header>
+
+    <main id="main">
+      <section class="page-header">
+        <div class="container">
+          <h1>Request Help from Your Community</h1>
+          <p class="page-subtitle">
+            Connect with caring volunteers who are ready to assist with daily
+            tasks and provide companionship
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="container">
+          <div class="content-grid">
+            <div class="content-main">
+              <div class="info-box">
+                <h2>How We Can Help</h2>
+                <p>Our network of screened volunteers can assist with:</p>
+                <ul>
+                  <li>Grocery shopping and delivery</li>
+                  <li>Prescription pickup</li>
+                  <li>Transportation to medical appointments</li>
+                  <li>Light household tasks</li>
+                  <li>Companionship and social visits</li>
+                  <li>Help with technology</li>
+                  <li>Pet care assistance</li>
+                  <li>Other tasks to help you stay independent</li>
+                </ul>
+                <p>
+                  <strong
+                    >All services are provided free of charge by caring
+                    community volunteers.</strong
+                  >
+                </p>
+              </div>
+
+              <form id="senior-request-form" class="form-card" novalidate>
+                <h2>Request Assistance</h2>
+                <p>
+                  Please fill out this form to connect with a volunteer in your
+                  area. All information is kept confidential.
+                </p>
+
+                <div class="form-group">
+                  <label for="senior-name">Full Name *</label>
+                  <input
+                    type="text"
+                    id="senior-name"
+                    name="name"
+                    required
+                    aria-describedby="senior-name-error"
+                    maxlength="100"
+                  />
+                  <div
+                    id="senior-name-error"
+                    class="error-message"
+                    role="alert"
+                  ></div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="senior-phone">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="senior-phone"
+                      name="phone"
+                      aria-describedby="senior-phone-error"
+                      maxlength="20"
+                    />
+                    <div
+                      id="senior-phone-error"
+                      class="error-message"
+                      role="alert"
+                    ></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="senior-email">Email Address</label>
+                    <input
+                      type="email"
+                      id="senior-email"
+                      name="email"
+                      aria-describedby="senior-email-error"
+                      maxlength="100"
+                    />
+                    <div
+                      id="senior-email-error"
+                      class="error-message"
+                      role="alert"
+                    ></div>
+                  </div>
+                </div>
+                <p class="form-note">
+                  Please provide at least one contact method (phone or email).
+                </p>
+
+                <div class="form-group">
+                  <label for="senior-address">Address/Neighborhood *</label>
+                  <input
+                    type="text"
+                    id="senior-address"
+                    name="address"
+                    required
+                    aria-describedby="senior-address-error"
+                    maxlength="200"
+                    placeholder="e.g., Old Town, Vilnius or Street name and district"
+                  />
+                  <div
+                    id="senior-address-error"
+                    class="error-message"
+                    role="alert"
+                  ></div>
+                  <p class="form-help">
+                    We need your general area to match you with nearby
+                    volunteers. Specific address details can be shared later.
+                  </p>
+                </div>
+
+                <div class="form-group">
+                  <label for="senior-time">Preferred Time for Assistance</label>
+                  <input
+                    type="text"
+                    id="senior-time"
+                    name="time"
+                    aria-describedby="senior-time-error"
+                    maxlength="100"
+                    placeholder="e.g., Tuesdays 10:00-12:00, Weekday mornings"
+                  />
+                  <div
+                    id="senior-time-error"
+                    class="error-message"
+                    role="alert"
+                  ></div>
+                </div>
+
+                <fieldset class="form-group">
+                  <legend>Type of Assistance Needed *</legend>
+                  <div class="checkbox-group">
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="assistance-type"
+                        value="Grocery Delivery"
+                      />
+                      Grocery shopping and delivery
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="assistance-type"
+                        value="Medication Pickup"
+                      />
+                      Prescription pickup
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="assistance-type"
+                        value="Transportation"
+                      />
+                      Transportation to appointments
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="assistance-type"
+                        value="Companionship"
+                      />
+                      Companionship and social visits
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="assistance-type"
+                        value="Light Household Tasks"
+                      />
+                      Light household tasks
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="assistance-type"
+                        value="Technology Help"
+                      />
+                      Help with technology
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="assistance-type"
+                        value="Pet Care"
+                      />
+                      Pet care assistance
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="assistance-type"
+                        value="Other"
+                      />
+                      Other (please describe below)
+                    </label>
+                  </div>
+                  <div
+                    id="assistance-type-error"
+                    class="error-message"
+                    role="alert"
+                  ></div>
+                </fieldset>
+
+                <div class="form-group">
+                  <label for="senior-notes">Additional Information</label>
+                  <textarea
+                    id="senior-notes"
+                    name="notes"
+                    rows="4"
+                    maxlength="500"
+                    placeholder="Please describe any specific needs, preferences, or other details that would help us match you with the right volunteer."
+                    aria-describedby="senior-notes-error"
+                  ></textarea>
+                  <div
+                    id="senior-notes-error"
+                    class="error-message"
+                    role="alert"
+                  ></div>
+                </div>
+
+                <div class="form-group consent-section">
+                  <label class="checkbox-label consent-label">
+                    <input
+                      type="checkbox"
+                      name="consent"
+                      id="senior-consent"
+                      required
+                    />
+                    I consent to ENW storing my information and sharing relevant
+                    details with matched volunteers. I understand that all
+                    volunteers are screened, and I can withdraw consent at any
+                    time. *
+                  </label>
+                  <div
+                    id="senior-consent-error"
+                    class="error-message"
+                    role="alert"
+                  ></div>
+                  <p class="form-help">
+                    By submitting this form, you agree to our
+                    <a href="privacy.html">Privacy Policy</a> and
+                    <a href="terms.html">Terms of Service</a>.
+                  </p>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">
+                  Submit Request
+                </button>
+              </form>
+
+              <div
+                id="success-message"
+                class="success-message"
+                role="alert"
+                aria-live="polite"
+                style="display: none"
+              >
+                <h3>Request Submitted Successfully!</h3>
+                <p>
+                  Thank you for reaching out. We'll review your request and
+                  connect you with a suitable volunteer in your area within 2-3
+                  business days. You'll receive a call or email to confirm the
+                  match and next steps.
+                </p>
+                <p>
+                  If you need immediate assistance or have urgent needs, please
+                  call our helpline at (555) 123-4567.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  onclick="resetForm('senior-request-form')"
+                >
+                  Submit Another Request
+                </button>
+              </div>
+            </div>
+
+            <div class="content-sidebar">
+              <div class="sidebar-card">
+                <h3>What Happens Next?</h3>
+                <ol>
+                  <li>
+                    <strong>Review:</strong> We'll review your request within 24
+                    hours
+                  </li>
+                  <li>
+                    <strong>Match:</strong> We'll find a suitable volunteer in
+                    your area
+                  </li>
+                  <li>
+                    <strong>Contact:</strong> You'll receive a call/email about
+                    your match
+                  </li>
+                  <li>
+                    <strong>Meet:</strong> An initial meeting to ensure
+                    compatibility
+                  </li>
+                  <li>
+                    <strong>Ongoing Support:</strong> Regular check-ins to
+                    ensure everything goes well
+                  </li>
+                </ol>
+              </div>
+
+              <div class="sidebar-card safety-info">
+                <h3>Your Safety is Our Priority</h3>
+                <ul>
+                  <li>All volunteers undergo background screening</li>
+                  <li>References are checked and verified</li>
+                  <li>Regular check-ins ensure positive experiences</li>
+                  <li>You can request a different volunteer at any time</li>
+                  <li>Emergency contacts are always available</li>
+                </ul>
+              </div>
+
+              <div class="sidebar-card">
+                <h3>Need Help with This Form?</h3>
+                <p>
+                  If you need assistance filling out this form, please contact
+                  us:
+                </p>
+                <ul>
+                  <li><strong>Phone:</strong> (555) 123-4567</li>
+                  <li><strong>Email:</strong> help@elderlynw.org</li>
+                </ul>
+                <p>
+                  A staff member or volunteer can help you complete your request
+                  over the phone.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="assets/js/inject-layout.js"></script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/forms.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        initializeLayout("seniors");
+        initializeSeniorForm();
+      });
+    </script>
+  </body>
+</html>

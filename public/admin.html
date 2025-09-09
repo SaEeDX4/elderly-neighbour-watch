@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Elderly Neighbour Watch</title>
+    <meta
+      name="description"
+      content="ENW administrative dashboard for managing volunteer and senior requests."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header id="header-placeholder"></header>
+
+    <main id="main">
+      <section class="page-header">
+        <div class="container">
+          <h1>Admin Dashboard</h1>
+          <p class="page-subtitle">
+            Manage volunteer registrations, senior requests, and community
+            messages
+          </p>
+        </div>
+      </section>
+
+      <section class="admin-controls">
+        <div class="container">
+          <div class="admin-toolbar">
+            <div class="search-filters">
+              <div class="search-group">
+                <label for="search-input" class="sr-only">Search by name</label>
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search by name..."
+                  class="search-input"
+                />
+                <button
+                  type="button"
+                  class="btn btn-outline btn-small"
+                  onclick="clearSearch()"
+                >
+                  Clear
+                </button>
+              </div>
+              <div class="filter-group">
+                <label for="neighborhood-filter" class="filter-label"
+                  >Filter by neighborhood:</label
+                >
+                <select id="neighborhood-filter" class="filter-select">
+                  <option value="">All neighborhoods</option>
+                  <option value="Old Town">Old Town</option>
+                  <option value="Antakalnis">Antakalnis</option>
+                  <option value="Žirmūnai">Žirmūnai</option>
+                  <option value="Šnipiškės">Šnipiškės</option>
+                  <option value="Užupis">Užupis</option>
+                </select>
+              </div>
+            </div>
+            <div class="admin-actions">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="exportData()"
+              >
+                Export Data
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline"
+                onclick="resetDemoData()"
+              >
+                Reset Demo Data
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="container">
+          <div class="admin-stats">
+            <div class="stat-card">
+              <div class="stat-number" id="total-seniors">0</div>
+              <div class="stat-label">Senior Requests</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="total-volunteers">0</div>
+              <div class="stat-label">Volunteers</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="total-messages">0</div>
+              <div class="stat-label">Messages</div>
+            </div>
+          </div>
+
+          <div class="admin-tabs">
+            <button type="button" class="tab-btn active" data-tab="seniors">
+              Senior Requests
+            </button>
+            <button type="button" class="tab-btn" data-tab="volunteers">
+              Volunteers
+            </button>
+            <button type="button" class="tab-btn" data-tab="messages">
+              Messages
+            </button>
+          </div>
+
+          <div id="seniors-tab" class="tab-content active">
+            <div class="table-header">
+              <h2>Senior Assistance Requests</h2>
+              <div class="table-filters">
+                <label for="assistance-filter" class="filter-label"
+                  >Filter by assistance type:</label
+                >
+                <select id="assistance-filter" class="filter-select">
+                  <option value="">All types</option>
+                  <option value="Grocery Delivery">Grocery Delivery</option>
+                  <option value="Medication Pickup">Medication Pickup</option>
+                  <option value="Transportation">Transportation</option>
+                  <option value="Companionship">Companionship</option>
+                  <option value="Light Household Tasks">
+                    Light Household Tasks
+                  </option>
+                  <option value="Technology Help">Technology Help</option>
+                  <option value="Pet Care">Pet Care</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-container">
+              <table id="seniors-table" class="data-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Area</th>
+                    <th>Assistance Type</th>
+                    <th>Preferred Time</th>
+                    <th>Date Submitted</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Data will be populated by JavaScript -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="volunteers-tab" class="tab-content">
+            <div class="table-header">
+              <h2>Volunteer Registrations</h2>
+              <div class="table-filters">
+                <label for="skills-filter" class="filter-label"
+                  >Filter by skills:</label
+                >
+                <select id="skills-filter" class="filter-select">
+                  <option value="">All skills</option>
+                  <option value="Grocery Shopping">Grocery Shopping</option>
+                  <option value="Medication Pickup">Medication Pickup</option>
+                  <option value="Transportation">Transportation</option>
+                  <option value="Companionship">Companionship</option>
+                  <option value="Light Household Tasks">
+                    Light Household Tasks
+                  </option>
+                  <option value="Technology Help">Technology Help</option>
+                  <option value="Pet Care">Pet Care</option>
+                  <option value="Language Support">Language Support</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-container">
+              <table id="volunteers-table" class="data-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Neighborhood</th>
+                    <th>Skills</th>
+                    <th>Availability</th>
+                    <th>Date Registered</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Data will be populated by JavaScript -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="messages-tab" class="tab-content">
+            <div class="table-header">
+              <h2>Contact Messages</h2>
+              <div class="table-filters">
+                <label for="subject-filter" class="filter-label"
+                  >Filter by subject:</label
+                >
+                <select id="subject-filter" class="filter-select">
+                  <option value="">All subjects</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Volunteer Questions">
+                    Volunteer Questions
+                  </option>
+                  <option value="Senior Services">Senior Services</option>
+                  <option value="Donation/Support">Donation/Support</option>
+                  <option value="Technical Support">Technical Support</option>
+                  <option value="Partnership">Partnership</option>
+                  <option value="Media Inquiry">Media Inquiry</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-container">
+              <table id="messages-table" class="data-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                    <th>Response Method</th>
+                    <th>Date Sent</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Data will be populated by JavaScript -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        id="reset-modal"
+        class="modal"
+        style="display: none"
+        role="dialog"
+        aria-labelledby="reset-modal-title"
+        aria-describedby="reset-modal-desc"
+      >
+        <div class="modal-content">
+          <h3 id="reset-modal-title">Reset Demo Data</h3>
+          <p id="reset-modal-desc">
+            This will clear all current data and restore the original demo data.
+            This action cannot be undone.
+          </p>
+          <div class="modal-actions">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="confirmResetData()"
+            >
+              Reset Data
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline"
+              onclick="closeResetModal()"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="assets/js/inject-layout.js"></script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/admin.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        initializeLayout("admin");
+        initializeAdmin();
+      });
+    </script>
+  </body>
+</html>
