@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become a Volunteer - Elderly Neighbour Watch</title>
+    <meta
+      name="description"
+      content="Join ENW as a volunteer and make a meaningful difference in the lives of elderly neighbors in your community."
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header id="header-placeholder"></header>
+
+    <main id="main">
+      <section class="page-header">
+        <div class="container">
+          <h1>Become a Community Volunteer</h1>
+          <p class="page-subtitle">
+            Make a meaningful difference in the lives of elderly neighbors while
+            building lasting friendships
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="container">
+          <div class="content-grid">
+            <div class="content-main">
+              <div class="info-box">
+                <h2>Why Volunteer with ENW?</h2>
+                <ul>
+                  <li>
+                    <strong>Flexible:</strong> Choose your own schedule and
+                    commitment level
+                  </li>
+                  <li>
+                    <strong>Meaningful:</strong> Make a real difference in
+                    someone's life
+                  </li>
+                  <li>
+                    <strong>Supported:</strong> Full training and ongoing
+                    support provided
+                  </li>
+                  <li>
+                    <strong>Safe:</strong> All interactions are coordinated and
+                    monitored
+                  </li>
+                  <li>
+                    <strong>Rewarding:</strong> Build friendships that enrich
+                    your own life
+                  </li>
+                  <li>
+                    <strong>Local:</strong> Help neighbors in your own community
+                  </li>
+                </ul>
+              </div>
+
+              <form id="volunteer-form" class="form-card" novalidate>
+                <h2>Volunteer Registration</h2>
+                <p>
+                  Join our community of caring volunteers. We'll match you with
+                  seniors based on your skills, availability, and location.
+                </p>
+
+                <div class="form-group">
+                  <label for="vol-name">Full Name *</label>
+                  <input
+                    type="text"
+                    id="vol-name"
+                    name="name"
+                    required
+                    aria-describedby="vol-name-error"
+                    maxlength="100"
+                  />
+                  <div
+                    id="vol-name-error"
+                    class="error-message"
+                    role="alert"
+                  ></div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="vol-phone">Phone Number *</label>
+                    <input
+                      type="tel"
+                      id="vol-phone"
+                      name="phone"
+                      required
+                      aria-describedby="vol-phone-error"
+                      maxlength="20"
+                    />
+                    <div
+                      id="vol-phone-error"
+                      class="error-message"
+                      role="alert"
+                    ></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="vol-email">Email Address *</label>
+                    <input
+                      type="email"
+                      id="vol-email"
+                      name="email"
+                      required
+                      aria-describedby="vol-email-error"
+                      maxlength="100"
+                    />
+                    <div
+                      id="vol-email-error"
+                      class="error-message"
+                      role="alert"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="vol-neighborhood">Your Neighborhood/Area *</label>
+                  <input
+                    type="text"
+                    id="vol-neighborhood"
+                    name="neighborhood"
+                    required
+                    aria-describedby="vol-neighborhood-error"
+                    maxlength="100"
+                    placeholder="e.g., Antakalnis, Old Town, Žirmūnai"
+                  />
+                  <div
+                    id="vol-neighborhood-error"
+                    class="error-message"
+                    role="alert"
+                  ></div>
+                  <p class="form-help">
+                    We'll match you with seniors in your area or nearby
+                    neighborhoods.
+                  </p>
+                </div>
+
+                <fieldset class="form-group">
+                  <legend>Areas Where You'd Like to Help *</legend>
+                  <div class="checkbox-group">
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="skills"
+                        value="Grocery Shopping"
+                      />
+                      Grocery shopping and delivery
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="skills"
+                        value="Medication Pickup"
+                      />
+                      Prescription pickup
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="skills"
+                        value="Transportation"
+                      />
+                      Transportation (I have a car/vehicle)
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="skills"
+                        value="Companionship"
+                      />
+                      Companionship and social visits
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="skills"
+                        value="Light Household Tasks"
+                      />
+                      Light household tasks
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="skills"
+                        value="Technology Help"
+                      />
+                      Technology assistance
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" name="skills" value="Pet Care" />
+                      Pet care assistance
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="skills"
+                        value="Language Support"
+                      />
+                      Language support (if multilingual)
+                    </label>
+                  </div>
+                  <div
+                    id="skills-error"
+                    class="error-message"
+                    role="alert"
+                  ></div>
+                </fieldset>
+
+                <fieldset class="form-group">
+                  <legend>Your Availability *</legend>
+                  <div class="checkbox-group">
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="availability"
+                        value="Weekday Mornings"
+                      />
+                      Weekday mornings (9 AM - 12 PM)
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="availability"
+                        value="Weekday Afternoons"
+                      />
+                      Weekday afternoons (12 PM - 5 PM)
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="availability"
+                        value="Weekday Evenings"
+                      />
+                      Weekday evenings (5 PM - 8 PM)
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="availability"
+                        value="Weekend Mornings"
+                      />
+                      Weekend mornings (9 AM - 12 PM)
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="availability"
+                        value="Weekend Afternoons"
+                      />
+                      Weekend afternoons (12 PM - 5 PM)
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="availability"
+                        value="Weekend Evenings"
+                      />
+                      Weekend evenings (5 PM - 8 PM)
+                    </label>
+                  </div>
+                  <div
+                    id="availability-error"
+                    class="error-message"
+                    role="alert"
+                  ></div>
+                </fieldset>
+
+                <div class="form-group">
+                  <label for="vol-experience"
+                    >Relevant Experience (Optional)</label
+                  >
+                  <textarea
+                    id="vol-experience"
+                    name="experience"
+                    rows="3"
+                    maxlength="500"
+                    placeholder="Any experience working with seniors, caregiving, or community service..."
+                    aria-describedby="vol-experience-error"
+                  ></textarea>
+                  <div
+                    id="vol-experience-error"
+                    class="error-message"
+                    role="alert"
+                  ></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="vol-motivation"
+                    >Why do you want to volunteer? (Optional)</label
+                  >
+                  <textarea
+                    id="vol-motivation"
+                    name="motivation"
+                    rows="3"
+                    maxlength="500"
+                    placeholder="Tell us what motivates you to help elderly neighbors..."
+                    aria-describedby="vol-motivation-error"
+                  ></textarea>
+                  <div
+                    id="vol-motivation-error"
+                    class="error-message"
+                    role="alert"
+                  ></div>
+                </div>
+
+                <div class="form-group consent-section">
+                  <label class="checkbox-label consent-label">
+                    <input
+                      type="checkbox"
+                      name="consent"
+                      id="vol-consent"
+                      required
+                    />
+                    I consent to ENW storing my information, conducting
+                    background checks, and sharing relevant details with matched
+                    seniors. I understand the volunteer process and can withdraw
+                    at any time. *
+                  </label>
+                  <div
+                    id="vol-consent-error"
+                    class="error-message"
+                    role="alert"
+                  ></div>
+                  <p class="form-help">
+                    By submitting this form, you agree to our
+                    <a href="privacy.html">Privacy Policy</a> and
+                    <a href="terms.html">Terms of Service</a>.
+                  </p>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">
+                  Register as Volunteer
+                </button>
+              </form>
+
+              <div
+                id="success-message"
+                class="success-message"
+                role="alert"
+                aria-live="polite"
+                style="display: none"
+              >
+                <h3>Registration Submitted Successfully!</h3>
+                <p>
+                  Thank you for your interest in volunteering with ENW! Here's
+                  what happens next:
+                </p>
+                <ol>
+                  <li>
+                    We'll contact you within 2-3 business days to schedule a
+                    brief interview
+                  </li>
+                  <li>
+                    Background check and reference verification (1-2 weeks)
+                  </li>
+                  <li>Volunteer orientation and training session</li>
+                  <li>Your first senior match based on your preferences</li>
+                </ol>
+                <p>
+                  Questions? Call us at (555) 123-4567 or email
+                  volunteers@elderlynw.org
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  onclick="resetForm('volunteer-form')"
+                >
+                  Submit Another Registration
+                </button>
+              </div>
+            </div>
+
+            <div class="content-sidebar">
+              <div class="sidebar-card">
+                <h3>Volunteer Process</h3>
+                <ol>
+                  <li><strong>Apply:</strong> Submit this registration form</li>
+                  <li><strong>Interview:</strong> Brief phone/video call</li>
+                  <li>
+                    <strong>Background Check:</strong> We verify your
+                    information
+                  </li>
+                  <li>
+                    <strong>Training:</strong> Learn best practices and safety
+                  </li>
+                  <li>
+                    <strong>Matching:</strong> Connect with your first senior
+                  </li>
+                  <li>
+                    <strong>Support:</strong> Ongoing guidance and check-ins
+                  </li>
+                </ol>
+              </div>
+
+              <div class="sidebar-card">
+                <h3>Time Commitment</h3>
+                <ul>
+                  <li><strong>Minimum:</strong> 2 hours per week</li>
+                  <li><strong>Typical:</strong> 3-5 hours per week</li>
+                  <li>
+                    <strong>Flexibility:</strong> Schedule around your
+                    availability
+                  </li>
+                  <li>
+                    <strong>Duration:</strong> 6-month minimum commitment
+                    preferred
+                  </li>
+                </ul>
+                <p>
+                  We understand life changes, and we're flexible with scheduling
+                  adjustments.
+                </p>
+              </div>
+
+              <div class="sidebar-card">
+                <h3>Volunteer Support</h3>
+                <ul>
+                  <li>Comprehensive orientation training</li>
+                  <li>24/7 coordinator support</li>
+                  <li>Monthly volunteer meetups</li>
+                  <li>Mileage reimbursement available</li>
+                  <li>Volunteer appreciation events</li>
+                  <li>Professional references provided</li>
+                </ul>
+              </div>
+
+              <div class="sidebar-card safety-info">
+                <h3>Safety Guidelines</h3>
+                <ul>
+                  <li>Never provide personal financial information</li>
+                  <li>All first meetings should be coordinated through ENW</li>
+                  <li>Report any concerns to coordinators immediately</li>
+                  <li>Follow established safety protocols</li>
+                  <li>Trust your instincts and communicate openly</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="assets/js/inject-layout.js"></script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/forms.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        initializeLayout("volunteers");
+        initializeVolunteerForm();
+      });
+    </script>
+  </body>
+</html>

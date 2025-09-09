@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support Our Mission - Elderly Neighbour Watch</title>
+    <meta
+      name="description"
+      content="Support ENW's mission to connect elderly neighbors with caring volunteers through secure donations."
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header id="header-placeholder"></header>
+
+    <main id="main">
+      <section class="page-header">
+        <div class="container">
+          <h1>Support Our Mission</h1>
+          <p class="page-subtitle">
+            Your donation helps us connect more seniors with caring volunteers
+            and build stronger communities
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="container">
+          <div class="content-grid">
+            <div class="content-main">
+              <div class="impact-section">
+                <h2>Your Impact</h2>
+                <p>
+                  ENW operates on the belief that everyone deserves community
+                  support and connection. Your donation directly funds:
+                </p>
+
+                <div class="impact-grid">
+                  <div class="impact-item">
+                    <h3>$25</h3>
+                    <p>Background screening for one volunteer</p>
+                  </div>
+                  <div class="impact-item">
+                    <h3>$50</h3>
+                    <p>Training materials for five new volunteers</p>
+                  </div>
+                  <div class="impact-item">
+                    <h3>$100</h3>
+                    <p>Coordinator support for 10 senior-volunteer matches</p>
+                  </div>
+                  <div class="impact-item">
+                    <h3>$250</h3>
+                    <p>Community events bringing neighbors together</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="donation-section">
+                <h2>Make a Donation</h2>
+                <p>
+                  Choose your donation amount and method below. All donations
+                  are secure and help us continue our vital community work.
+                </p>
+
+                <div class="donation-amounts">
+                  <h3>Quick Donation Amounts</h3>
+                  <div class="amount-buttons">
+                    <button type="button" class="amount-btn" data-amount="25">
+                      $25
+                    </button>
+                    <button type="button" class="amount-btn" data-amount="50">
+                      $50
+                    </button>
+                    <button type="button" class="amount-btn" data-amount="100">
+                      $100
+                    </button>
+                    <button type="button" class="amount-btn" data-amount="250">
+                      $250
+                    </button>
+                  </div>
+                  <div class="custom-amount">
+                    <label for="custom-amount">Or enter custom amount:</label>
+                    <div class="amount-input">
+                      <span class="currency-symbol">$</span>
+                      <input
+                        type="number"
+                        id="custom-amount"
+                        name="amount"
+                        min="5"
+                        step="1"
+                        placeholder="Enter amount"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="payment-methods">
+                  <h3>Payment Methods</h3>
+                  <div class="payment-grid">
+                    <div class="payment-option">
+                      <div class="payment-card">
+                        <h4>Credit/Debit Card</h4>
+                        <p>Secure payment via Stripe</p>
+                        <!-- TODO: Integrate Stripe payment processing -->
+                        <button
+                          type="button"
+                          class="btn btn-primary payment-btn"
+                          onclick="showPlaceholderMessage('stripe')"
+                        >
+                          Donate with Card
+                        </button>
+                      </div>
+                    </div>
+                    <div class="payment-option">
+                      <div class="payment-card">
+                        <h4>PayPal</h4>
+                        <p>Pay with your PayPal account</p>
+                        <!-- TODO: Integrate PayPal payment processing -->
+                        <button
+                          type="button"
+                          class="btn btn-secondary payment-btn"
+                          onclick="showPlaceholderMessage('paypal')"
+                        >
+                          Donate with PayPal
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="recurring-option">
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="recurring-donation" />
+                    Make this a monthly recurring donation
+                  </label>
+                  <p class="form-help">
+                    Monthly donations help us plan and provide consistent
+                    support to our community.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                id="payment-placeholder"
+                class="info-box"
+                style="display: none"
+                role="alert"
+                aria-live="polite"
+              >
+                <h3>Payment Integration Coming Soon</h3>
+                <p>
+                  We're currently setting up secure payment processing. In the
+                  meantime, you can support us by:
+                </p>
+                <ul>
+                  <li>
+                    Mailing a check to: ENW, 123 Community St, Vilnius 01234
+                  </li>
+                  <li>Calling us at (555) 123-4567 to donate over the phone</li>
+                  <li>
+                    Emailing donate@elderlynw.org for other donation methods
+                  </li>
+                </ul>
+                <button
+                  type="button"
+                  class="btn btn-outline"
+                  onclick="hidePlaceholderMessage()"
+                >
+                  Close
+                </button>
+              </div>
+
+              <div class="other-ways">
+                <h2>Other Ways to Support</h2>
+                <div class="support-options">
+                  <div class="support-option">
+                    <h3>Volunteer Your Time</h3>
+                    <p>
+                      The most valuable donation is your time. Join our
+                      volunteer network and directly help seniors in your
+                      community.
+                    </p>
+                    <a href="volunteers.html" class="btn btn-outline"
+                      >Become a Volunteer</a
+                    >
+                  </div>
+                  <div class="support-option">
+                    <h3>Spread the Word</h3>
+                    <p>
+                      Help us reach more people by sharing ENW with friends,
+                      family, and social networks.
+                    </p>
+                    <div class="share-buttons">
+                      <!-- TODO: Add actual sharing functionality -->
+                      <button type="button" class="btn btn-outline btn-small">
+                        Share on Facebook
+                      </button>
+                      <button type="button" class="btn btn-outline btn-small">
+                        Share on Twitter
+                      </button>
+                    </div>
+                  </div>
+                  <div class="support-option">
+                    <h3>Corporate Partnership</h3>
+                    <p>
+                      Is your business interested in supporting community
+                      initiatives? Contact us about partnership opportunities.
+                    </p>
+                    <a href="contact.html" class="btn btn-outline"
+                      >Contact Us</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-sidebar">
+              <div class="sidebar-card">
+                <h3>Donation FAQ</h3>
+                <div class="faq-item">
+                  <h4>Are donations tax-deductible?</h4>
+                  <p>
+                    Yes, ENW is a registered non-profit organization. You'll
+                    receive a tax-deductible receipt for all donations.
+                  </p>
+                </div>
+                <div class="faq-item">
+                  <h4>How is my donation used?</h4>
+                  <p>
+                    85% goes directly to program costs (volunteer screening,
+                    training, coordination). 15% covers administrative expenses.
+                  </p>
+                </div>
+                <div class="faq-item">
+                  <h4>Can I donate in honor of someone?</h4>
+                  <p>
+                    Yes! Contact us at donate@elderlynw.org to arrange memorial
+                    or honor donations.
+                  </p>
+                </div>
+                <div class="faq-item">
+                  <h4>Is my payment information secure?</h4>
+                  <p>
+                    Absolutely. We use industry-standard encryption and never
+                    store payment details on our servers.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sidebar-card">
+                <h3>Impact Report</h3>
+                <p><strong>Last Quarter:</strong></p>
+                <ul>
+                  <li>67 new seniors connected with help</li>
+                  <li>45 new volunteers trained and matched</li>
+                  <li>892 acts of assistance completed</li>
+                  <li>12 community events organized</li>
+                </ul>
+                <p>Your support makes all of this possible!</p>
+              </div>
+
+              <div class="sidebar-card">
+                <h3>Contact Donor Services</h3>
+                <p>Questions about donations?</p>
+                <ul>
+                  <li><strong>Email:</strong> donate@elderlynw.org</li>
+                  <li><strong>Phone:</strong> (555) 123-4567</li>
+                </ul>
+                <p>
+                  We're here to help with donation questions, receipts, or
+                  setting up recurring gifts.
+                </p>
+              </div>
+
+              <div class="sidebar-card testimonial">
+                <blockquote>
+                  <p>
+                    "Supporting ENW means supporting the idea that no one should
+                    face life's challenges alone. It's an investment in
+                    community."
+                  </p>
+                  <cite>- Sarah M., Monthly Donor</cite>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="assets/js/inject-layout.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        initializeLayout("donate");
+        initializeDonationPage();
+      });
+
+      function initializeDonationPage() {
+        // Handle amount selection
+        const amountButtons = document.querySelectorAll(".amount-btn");
+        const customAmountInput = document.getElementById("custom-amount");
+
+        amountButtons.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            amountButtons.forEach((b) => b.classList.remove("active"));
+            this.classList.add("active");
+            customAmountInput.value = "";
+          });
+        });
+
+        customAmountInput.addEventListener("input", function () {
+          if (this.value) {
+            amountButtons.forEach((btn) => btn.classList.remove("active"));
+          }
+        });
+      }
+
+      function showPlaceholderMessage(method) {
+        const placeholder = document.getElementById("payment-placeholder");
+        placeholder.style.display = "block";
+        placeholder.scrollIntoView({ behavior: "smooth" });
+
+        // TODO: Replace with actual payment integration
+        console.log("TODO: Integrate " + method + " payment processing");
+      }
+
+      function hidePlaceholderMessage() {
+        document.getElementById("payment-placeholder").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
