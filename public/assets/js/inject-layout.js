@@ -14,7 +14,7 @@ function injectHeader(currentPage) {
     <div class="container">
       <div class="header-content">
         <a href="index.html" class="logo">
-          <img src="assets/img/logo.svg" alt="ENW Logo" class="logo-img" width="40" height="40">
+          <img src="./assets/img/logo.svg" alt="ENW Logo" class="logo-img" width="40" height="40">
           <span>ENW</span>
         </a>
         
