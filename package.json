@@ -1,14 +1,14 @@
 {
-  "name": "enw-example-project",
+  "name": "elderly-neighbour-watch",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Elderly Neighbour Watch - static website connecting seniors with neighbourhood volunteers. Served on GitHub Pages; server.js is a tiny local Express static server.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Saeed Sharifzadeh",
+  "license": "MIT",
   "dependencies": {
     "express": "^5.1.0"
   }
